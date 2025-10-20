@@ -10,6 +10,8 @@ const elemCronometro = document.querySelector(".cronometro");
 
 const elemHorario = document.querySelector(".horario");
 
+var timer = 0;
+
 // ========= Adicionar classe tela--cronometro =========
 elemsExercicio.forEach(function (elemExercicio) {
   elemExercicio.addEventListener("click", function () {
@@ -49,3 +51,9 @@ atualizarHorario();
 setInterval(() => {
   atualizarHorario();
 }, 5000);
+
+// ========= Construindo o cronometro =========
+setInterval(() => {
+  timer = timer + 10;
+  console.log(timer);
+}, 10);
